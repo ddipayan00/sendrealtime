@@ -26,5 +26,5 @@ io.on("connection", function(socket){
 		socket.in(data.uid).emit("fs-share", data.buffer);
 	})
 });
-
-server.listen(5000);
+let port = process.env.PORT || 8080;
+server.listen(port);
